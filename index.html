@@ -7,8 +7,8 @@
   <meta name="description" content="Покерный клуб «Дарк Марьяж»: спортивный покер, обучение с нуля, турниры и фрироллы. Стратегия, навык, сообщество.">
   <meta name="theme-color" content="#f2ede2">
   <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Crect width='100' height='100' fill='%23f2ede2'/%3E%3Cpath d='M50 14 86 50 50 86 14 50Z' fill='%23b98d47'/%3E%3C/svg%3E">
+  <link rel="preload" href="fonts/yanone-cyrillic.woff2" as="font" type="font/woff2" crossorigin>
   <link rel="preload" href="fonts/jost-cyrillic.woff2" as="font" type="font/woff2" crossorigin>
-  <link rel="preload" href="fonts/unbounded-cyrillic.woff2" as="font" type="font/woff2" crossorigin>
   <link rel="stylesheet" href="css/fonts.css">
   <link rel="stylesheet" href="css/styles.css">
 </head>
@@ -17,9 +17,10 @@
 
   <header class="site-header">
     <div class="container header__inner">
-      <a class="brand" href="#top" aria-label="Дарк Марьяж — покерный клуб, в начало страницы">
-        <img class="brand__king" src="images/logo.png" alt="" width="452" height="1055">
-        <img class="brand__word" src="images/logo.png" alt="" width="452" height="1055">
+      <a class="brand" href="#top" aria-label="Дарк Марьяж — клуб спортивного покера, в начало страницы">
+        <img class="brand__mark" src="images/logo.png" alt="" width="452" height="1055">
+        <span class="brand__name">Дарк<br>Марьяж</span>
+        <span class="brand__tag">Клуб спортивного<br>покера</span>
       </a>
 
       <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="site-nav" aria-label="Открыть меню">
@@ -28,9 +29,8 @@
 
       <nav class="site-nav" id="site-nav" aria-label="Основная навигация">
         <ul class="site-nav__list">
-          <li><a href="#about">О покере</a></li>
+          <li><a href="#club">О клубе</a></li>
           <li><a href="#school">Обучение</a></li>
-          <li><a href="#events">Ивенты</a></li>
           <li><a href="#contacts">Контакты</a></li>
         </ul>
       </nav>
@@ -40,70 +40,121 @@
   <main id="main">
     <section class="hero" id="top" aria-labelledby="hero-title">
       <span class="hero__pattern" aria-hidden="true"></span>
-      <span class="hero__suit" aria-hidden="true">♠</span>
       <div class="container hero__inner">
-        <div class="hero__content">
-          <h1 class="hero__title" id="hero-title">Спортивный покер — больше, чем игра</h1>
-          <p class="hero__subtitle">Стратегия. Навык. Сообщество.</p>
-          <span class="hero__rule" aria-hidden="true"></span>
-          <p class="hero__text">Спортивный покер — это интеллектуальный вид спорта, где важны не только карты, но и стратегия, психология, дисциплина и умение читать соперников.</p>
+        <div class="hero__head">
+          <span class="section__rule" aria-hidden="true"></span>
+          <h1 class="hero__title" id="hero-title">Dark<br>marriage</h1>
+          <p class="hero__subtitle">Клуб спортивного покера</p>
+        </div>
+        <figure class="hero__media">
+          <span class="deco" aria-hidden="true">
+            <span class="deco__diamond deco__diamond--lg"></span>
+            <span class="deco__diamond deco__diamond--sm"></span>
+            <span class="deco__diamond deco__diamond--line"></span>
+            <span class="deco__corner"></span>
+            <span class="deco__dot-line"></span>
+          </span>
+          <span class="hero__suit hero__suit--top" aria-hidden="true">♣</span>
+          <span class="hero__suit hero__suit--bottom" aria-hidden="true">♦</span>
+          <img class="hero__king" src="images/logo.png" alt="" width="452" height="1055">
+        </figure>
+        <div class="hero__body">
+          <ul class="hero__checks">
+            <li>
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                <circle cx="12" cy="12" r="9.2"/>
+                <path d="M7.8 12.4l2.8 2.8 5.6-6"/>
+              </svg>
+              <span>Система обучения новичков</span>
+            </li>
+            <li>
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                <circle cx="12" cy="12" r="9.2"/>
+                <path d="M7.8 12.4l2.8 2.8 5.6-6"/>
+              </svg>
+              <span>Игра не на деньги</span>
+            </li>
+            <li>
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                <circle cx="12" cy="12" r="9.2"/>
+                <path d="M7.8 12.4l2.8 2.8 5.6-6"/>
+              </svg>
+              <span>Первый визит бесплатно</span>
+            </li>
+          </ul>
           <a class="btn btn-solid hero__cta" href="#contacts">
-            <span>Присоединиться к клубу</span>
+            <span>Записаться на турнир</span>
             <svg class="btn__arr" viewBox="0 0 24 10" aria-hidden="true"><path d="M1 5h20M17 1.5 21.5 5 17 8.5" fill="none" stroke="currentColor" stroke-width="1.6"/></svg>
           </a>
         </div>
-        <figure class="hero__media">
-          <span class="hero__backdrop" aria-hidden="true">
-            <span class="hero__diamond hero__diamond--lg"></span>
-            <span class="hero__diamond hero__diamond--sm"></span>
-            <span class="hero__diamond hero__diamond--line"></span>
-            <span class="hero__corner"></span>
-          </span>
-          <img class="hero__art" src="images/cards-no-bg-preview.png" alt="Чёрно-золотые карты и фишки с королём клуба «Дарк Марьяж»" width="768" height="475">
-        </figure>
+      </div>
+      <div class="container">
+        <p class="hero__strip">Стратегия · Навык · Сообщество</p>
       </div>
     </section>
 
-    <section class="section power" id="about" aria-labelledby="about-title">
-      <div class="container power__inner">
-        <div class="power__text">
-          <h2 class="section__title" id="about-title">Что такое спортивный покер?</h2>
-          <p class="section__lead">Это не просто карты. Это интеллектуальная игра, где нужны анализ, математика, психология и опыт. Здесь важно принимать взвешенные решения, контролировать эмоции и быть на шаг впереди соперников.</p>
+    <section class="section section--soft club" id="club" aria-labelledby="club-title">
+      <img class="club__art" src="images/logo.png" alt="" aria-hidden="true" loading="lazy">
+      <div class="container club__inner">
+        <div class="club__text">
+          <span class="section__rule" aria-hidden="true"></span>
+          <h2 class="section__title" id="club-title">О клубе</h2>
+          <p class="section__lead">Dark Marriage — это место, где покер становится больше, чем просто игрой. Мы создаём комьюнити людей, которые хотят развиваться, учиться и получать удовольствие от процесса.</p>
         </div>
-        <ul class="power__grid">
-          <li class="power__item">
-            <svg class="power__icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
-              <path d="M9.5 2A2.5 2.5 0 0 1 12 4.5v15a2.5 2.5 0 0 1-4.96.44 2.5 2.5 0 0 1-2.96-3.08 3 3 0 0 1-.34-5.58 2.5 2.5 0 0 1 1.32-4.24 2.5 2.5 0 0 1 1.98-3A2.5 2.5 0 0 1 9.5 2Z"/>
-              <path d="M14.5 2A2.5 2.5 0 0 0 12 4.5v15a2.5 2.5 0 0 0 4.96.44 2.5 2.5 0 0 0 2.96-3.08 3 3 0 0 0 .34-5.58 2.5 2.5 0 0 0-1.32-4.24 2.5 2.5 0 0 0-1.98-3A2.5 2.5 0 0 0 14.5 2Z"/>
+        <div class="club__aside">
+          <p class="club__motto">Полный<br>контроль<br>над игрой</p>
+          <figure class="club__media">
+            <span class="deco" aria-hidden="true">
+              <span class="deco__diamond deco__diamond--lg"></span>
+              <span class="deco__diamond deco__diamond--sm"></span>
+              <span class="deco__diamond deco__diamond--line"></span>
+            </span>
+            <img class="club__cards" src="images/cards-no-bg-preview.png" alt="Чёрно-золотые карты A♠ и K♠ и фишки с королём клуба «Дарк Марьяж»" width="768" height="475" loading="lazy">
+          </figure>
+        </div>
+      </div>
+    </section>
+
+    <section class="section poker" aria-labelledby="poker-title">
+      <div class="container poker__inner">
+        <div class="poker__text">
+          <span class="section__rule" aria-hidden="true"></span>
+          <h2 class="section__title" id="poker-title">Что такое<br>спортивный покер?</h2>
+          <p class="section__lead">Спортивный покер — это интеллектуальный вид спорта, где важны не только карты, но и стратегия, психология, дисциплина и умение читать соперников.</p>
+        </div>
+        <ul class="poker__features">
+          <li>
+            <svg class="poker__icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+              <path d="M12 5a3 3 0 1 0-5.997.125 4 4 0 0 0-2.526 5.77 4 4 0 0 0 .556 6.588A4 4 0 1 0 12 18Z"/>
+              <path d="M12 5a3 3 0 1 1 5.997.125 4 4 0 0 1 2.526 5.77 4 4 0 0 1-.556 6.588A4 4 0 1 1 12 18Z"/>
+              <path d="M15 13a4.5 4.5 0 0 1-3-4 4.5 4.5 0 0 1-3 4"/>
             </svg>
             <span>Стратегия</span>
           </li>
-          <li class="power__item">
-            <svg class="power__icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
-              <circle cx="12.4" cy="12" r="8.2"/>
-              <path d="M13.9 13.9a3.2 3.2 0 1 1-3.2-3.2 2.2 2.2 0 0 1 2.2 2.2 1.2 1.2 0 0 1-1.2 1.2.8.8 0 0 1-.8-.8"/>
+          <li>
+            <svg class="poker__icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+              <path d="M15.6 3.5C11.2 3.5 7.8 6.9 7.8 11.8L6.6 14.6l1.5.8-.1 1 1.7.8 1.8 1.2v2.6h4.8v-2.7c3-1 5.4-4.2 5.4-7.6 0-4.1-2.7-7.2-6.1-7.2z"/>
+              <circle cx="15.2" cy="10.6" r="2.3"/>
             </svg>
             <span>Психология</span>
           </li>
-          <li class="power__item">
-            <svg class="power__icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
-              <path d="M4 20h16"/>
-              <path d="M7.5 20v-5.5"/>
-              <path d="M12 20V10"/>
-              <path d="M16.5 20V6.5"/>
-              <path d="M4.5 10.5 9 6.5l3.4 2.6L19.5 3"/>
-              <path d="M16.5 3h3v3"/>
+          <li>
+            <svg class="poker__icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+              <path d="M4.5 20.5h15"/>
+              <path d="M8 20.5v-5.2M12 20.5v-8.6M16 20.5v-3.4"/>
+              <path d="M7.6 10.4l4-3.6 2.4 2.2 4-3.8"/>
+              <path d="M15.6 5.2h2.6v2.6"/>
             </svg>
             <span>Навык</span>
           </li>
-          <li class="power__item">
-            <svg class="power__icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
-              <path d="M8 4h8v5.2a4 4 0 0 1-8 0z"/>
-              <path d="M8 5.5H6a2.5 2.5 0 0 0 2.4 4.4"/>
-              <path d="M16 5.5h2a2.5 2.5 0 0 1-2.4 4.4"/>
-              <path d="M12 13.4v3.1"/>
-              <path d="M9.9 16.5h4.2l.9 3.3H9z"/>
-              <path d="M9.3 19.8h5.4"/>
+          <li>
+            <svg class="poker__icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+              <path d="M6 9H4.5a2.5 2.5 0 0 1 0-5H6"/>
+              <path d="M18 9h1.5a2.5 2.5 0 0 0 0-5H18"/>
+              <path d="M4 22h16"/>
+              <path d="M10 14.66V17c0 .55-.47.98-.97 1.21C7.85 18.75 7 20.24 7 22"/>
+              <path d="M14 14.66V17c0 .55.47.98.97 1.21C16.15 18.75 17 20.24 17 22"/>
+              <path d="M18 2H6v7a6 6 0 0 0 12 0V2Z"/>
             </svg>
             <span>Результат</span>
           </li>
@@ -111,60 +162,36 @@
       </div>
     </section>
 
-    <section class="section study" id="school" aria-labelledby="school-title">
-      <span class="study__suit" aria-hidden="true">♦</span>
+    <section class="section section--soft study" id="school" aria-labelledby="school-title">
       <div class="container study__inner">
         <div class="study__content">
-          <h2 class="section__title" id="school-title">Научим играть с нуля</h2>
-          <p class="section__lead">Мы помогаем новичкам с нуля освоить покер: объясняем правила, делимся стратегиями, проводим разборы раздач и поддерживаем на каждом этапе. У нас комфортная атмосфера и опытные наставники, которые действительно болеют за ваш прогресс.</p>
+          <span class="section__rule" aria-hidden="true"></span>
+          <h2 class="section__title" id="school-title">Научим играть<br>с нуля</h2>
+          <p class="section__lead">Мы помогаем новичкам с нуля освоить покер: объясняем правила, делимся стратегиями, проводим разборы раздач и поддерживаем на каждом этапе. У нас комфортная атмосфера, опытные наставники и дружелюбное комьюнити.</p>
           <ul class="study__checks">
             <li>
               <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
                 <circle cx="12" cy="12" r="9.2"/>
                 <path d="M7.8 12.4l2.8 2.8 5.6-6"/>
               </svg>
-              <span>Обучение<br>с нуля</span>
+              <span>Обучение с нуля</span>
             </li>
             <li>
               <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
                 <circle cx="12" cy="12" r="9.2"/>
                 <path d="M7.8 12.4l2.8 2.8 5.6-6"/>
               </svg>
-              <span>Практика<br>и разборы</span>
+              <span>Практика и разборы</span>
             </li>
             <li>
               <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
                 <circle cx="12" cy="12" r="9.2"/>
                 <path d="M7.8 12.4l2.8 2.8 5.6-6"/>
               </svg>
-              <span>Поддержка<br>и мотивация</span>
+              <span>Поддержка и мотивация</span>
             </li>
           </ul>
         </div>
-        <figure class="study__media">
-          <img class="photo photo--gold" src="images/study.jpg" alt="Игрок раскрывает карты за покерным столом" width="960" height="638" loading="lazy">
-        </figure>
-      </div>
-    </section>
-
-    <section class="section events" id="events" aria-labelledby="events-title">
-      <div class="container events__inner">
-        <div class="events__content">
-          <h2 class="section__title" id="events-title">Ивенты и фрироллы</h2>
-          <p class="section__lead">Регулярные турниры, живые и онлайн-ивенты, фрироллы для всех желающих. У нас каждый найдёт формат по душе — от дружеских игр до серьёзных соревнований.</p>
-          <a class="btn btn-line events__cta" href="#contacts">
-            <span>Календарь событий</span>
-            <svg class="btn__arr" viewBox="0 0 24 10" aria-hidden="true"><path d="M1 5h20M17 1.5 21.5 5 17 8.5" fill="none" stroke="currentColor" stroke-width="1.6"/></svg>
-          </a>
-          <p class="events__note">Расписание: <span class="placeholder">[добавьте расписание или ссылку на канал клуба]</span></p>
-        </div>
-        <figure class="events__media">
-          <img class="photo photo--warm" src="images/events.jpg" alt="Веер игральных карт на тёмном столе" width="1024" height="683" loading="lazy">
-          <span class="events__script" aria-hidden="true">
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"><path d="M3 18h18"/><path d="M4.5 15.5 3 6.5l4.8 3.6L12 3.5l4.2 6.6L21 6.5l-1.5 9z"/></svg>
-            <span>Играй.<br>Расти.<br>Побеждай!</span>
-          </span>
-        </figure>
       </div>
     </section>
   </main>

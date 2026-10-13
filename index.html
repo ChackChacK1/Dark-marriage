@@ -17,12 +17,9 @@
 
   <header class="site-header">
     <div class="container header__inner">
-      <a class="brand" href="#top" aria-label="Дарк Марьяж — в начало страницы">
-        <img class="brand__mark" src="images/logo.png" alt="" width="452" height="1055">
-        <span class="brand__text">
-          <span class="brand__name">Дарк<br>Марьяж</span>
-          <span class="brand__tagline">Покерный клуб</span>
-        </span>
+      <a class="brand" href="#top" aria-label="Дарк Марьяж — покерный клуб, в начало страницы">
+        <img class="brand__king" src="images/logo.png" alt="" width="452" height="1055">
+        <img class="brand__word" src="images/logo.png" alt="" width="452" height="1055">
       </a>
 
       <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="site-nav" aria-label="Открыть меню">
@@ -43,6 +40,7 @@
   <main id="main">
     <section class="hero" id="top" aria-labelledby="hero-title">
       <span class="hero__pattern" aria-hidden="true"></span>
+      <span class="hero__suit" aria-hidden="true">♠</span>
       <div class="container hero__inner">
         <div class="hero__content">
           <h1 class="hero__title" id="hero-title">Спортивный покер — больше, чем игра</h1>
@@ -55,9 +53,13 @@
           </a>
         </div>
         <figure class="hero__media">
-          <span class="hero__frame">
-            <img class="photo photo--deep" src="images/hero.jpg" alt="Стопки покерных фишек и карты на игровом столе" width="1024" height="683">
+          <span class="hero__backdrop" aria-hidden="true">
+            <span class="hero__diamond hero__diamond--lg"></span>
+            <span class="hero__diamond hero__diamond--sm"></span>
+            <span class="hero__diamond hero__diamond--line"></span>
+            <span class="hero__corner"></span>
           </span>
+          <img class="hero__art" src="images/cards-no-bg-preview.png" alt="Чёрно-золотые карты и фишки с королём клуба «Дарк Марьяж»" width="768" height="475">
         </figure>
       </div>
     </section>
@@ -110,6 +112,7 @@
     </section>
 
     <section class="section study" id="school" aria-labelledby="school-title">
+      <span class="study__suit" aria-hidden="true">♦</span>
       <div class="container study__inner">
         <div class="study__content">
           <h2 class="section__title" id="school-title">Научим играть с нуля</h2>

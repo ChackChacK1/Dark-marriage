@@ -28,7 +28,6 @@
 
 html {
   scroll-behavior: smooth;
-  scroll-padding-top: 88px;
   -webkit-text-size-adjust: 100%;
 }
 
@@ -208,10 +207,9 @@ svg {
 /* Header */
 
 .site-header {
-  position: sticky;
-  top: 0;
+  position: relative;
   z-index: 60;
-  background: #fcf9f3;
+  background: var(--cream-soft);
 }
 
 .header__inner {
@@ -936,6 +934,11 @@ svg {
 /* Mobile hero tuning */
 
 @media (max-width: 879.98px) {
+  .site-header {
+    position: sticky;
+    top: 0;
+  }
+
   .hero {
     padding-block: 22px clamp(28px, 5vw, 56px);
   }
@@ -982,10 +985,6 @@ svg {
 /* Desktop */
 
 @media (min-width: 880px) {
-  html {
-    scroll-padding-top: 104px;
-  }
-
   .nav-toggle {
     display: none;
   }

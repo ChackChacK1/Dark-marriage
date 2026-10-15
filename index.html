@@ -15,29 +15,29 @@
 <body>
   <a class="skip-link" href="#main">Перейти к содержимому</a>
 
-  <header class="site-header">
-    <div class="container header__inner">
-      <a class="brand" href="#top" aria-label="Дарк Марьяж — клуб спортивного покера, в начало страницы">
-        <img class="brand__mark" src="images/logo2.png" alt="" width="442" height="181">
-        <span class="brand__tag">Клуб спортивного<br>покера</span>
-      </a>
+  <div class="top-shell" id="top">
+    <header class="site-header">
+      <div class="container header__inner">
+        <a class="brand" href="#top" aria-label="Дарк Марьяж — клуб спортивного покера, в начало страницы">
+          <img class="brand__mark" src="images/logo2.png" alt="" width="442" height="181">
+          <span class="brand__tag">Клуб спортивного<br>покера</span>
+        </a>
 
-      <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="site-nav" aria-label="Открыть меню">
-        <span class="nav-toggle__bars" aria-hidden="true"></span>
-      </button>
+        <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="site-nav" aria-label="Открыть меню">
+          <span class="nav-toggle__bars" aria-hidden="true"></span>
+        </button>
 
-      <nav class="site-nav" id="site-nav" aria-label="Основная навигация">
-        <ul class="site-nav__list">
-          <li><a href="#club">О клубе</a></li>
-          <li><a href="#school">Обучение</a></li>
-          <li><a href="#contacts">Контакты</a></li>
-        </ul>
-      </nav>
-    </div>
-  </header>
+        <nav class="site-nav" id="site-nav" aria-label="Основная навигация">
+          <ul class="site-nav__list">
+            <li><a href="#club">О клубе</a></li>
+            <li><a href="#school">Обучение</a></li>
+            <li><a href="#contacts">Контакты</a></li>
+          </ul>
+        </nav>
+      </div>
+    </header>
 
-  <main id="main">
-    <section class="hero" id="top" aria-labelledby="hero-title">
+    <section class="hero" aria-labelledby="hero-title">
       <span class="hero__pattern" aria-hidden="true"></span>
       <div class="container hero__inner">
         <div class="hero__head">
@@ -94,7 +94,9 @@
         <p class="hero__strip">Стратегия · Навык · Сообщество</p>
       </div>
     </section>
+  </div>
 
+  <main id="main">
     <section class="section section--soft club" id="club" aria-labelledby="club-title">
       <img class="club__art" src="images/logo.png" alt="" aria-hidden="true" loading="lazy">
       <div class="container club__inner">

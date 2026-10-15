@@ -211,8 +211,7 @@ svg {
   position: sticky;
   top: 0;
   z-index: 60;
-  background: var(--cream);
-  border-bottom: 1px solid rgba(156, 118, 58, 0.22);
+  background: #fcf9f3;
 }
 
 .header__inner {
@@ -221,7 +220,7 @@ svg {
   align-items: center;
   justify-content: space-between;
   gap: 16px;
-  padding-block: 10px;
+  padding-block: 12px;
 }
 
 .brand {
@@ -234,23 +233,8 @@ svg {
 
 .brand__mark {
   flex: none;
-  height: 44px;
+  height: 46px;
   width: auto;
-  aspect-ratio: 452 / 620;
-  object-fit: cover;
-  object-position: top center;
-  filter: var(--king-tone);
-  mix-blend-mode: darken;
-}
-
-.brand__name {
-  font-family: var(--font-display);
-  font-weight: 400;
-  font-size: 1rem;
-  line-height: 1.08;
-  letter-spacing: 0.04em;
-  text-transform: uppercase;
-  color: var(--ink);
 }
 
 .brand__tag {
@@ -266,15 +250,21 @@ svg {
   padding: 0;
   border: 0;
   background: none;
-  color: var(--ink);
+  color: var(--gold-mid);
   cursor: pointer;
+  transition: color 0.2s ease;
+}
+
+.nav-toggle:hover {
+  color: var(--gold-deep);
 }
 
 .nav-toggle__bars {
   position: relative;
   display: block;
-  width: 26px;
+  width: 28px;
   height: 2px;
+  border-radius: 1px;
   background: currentColor;
   transition: background-color 0.2s ease;
 }
@@ -283,19 +273,22 @@ svg {
 .nav-toggle__bars::after {
   content: "";
   position: absolute;
-  left: 0;
   top: 0;
-  width: 100%;
   height: 2px;
+  border-radius: 1px;
   background: currentColor;
-  transition: transform 0.2s ease;
+  transition: transform 0.2s ease, width 0.2s ease, left 0.2s ease;
 }
 
 .nav-toggle__bars::before {
+  left: 0;
+  width: 62%;
   transform: translateY(-7px);
 }
 
 .nav-toggle__bars::after {
+  left: 38%;
+  width: 62%;
   transform: translateY(7px);
 }
 
@@ -304,10 +297,14 @@ svg {
 }
 
 .site-header.is-open .nav-toggle__bars::before {
+  left: 0;
+  width: 100%;
   transform: translateY(0) rotate(45deg);
 }
 
 .site-header.is-open .nav-toggle__bars::after {
+  left: 0;
+  width: 100%;
   transform: translateY(0) rotate(-45deg);
 }
 
@@ -902,11 +899,7 @@ svg {
 
 @media (min-width: 760px) {
   .brand__mark {
-    height: 52px;
-  }
-
-  .brand__name {
-    font-size: 1.15rem;
+    height: 54px;
   }
 
   .brand__tag {

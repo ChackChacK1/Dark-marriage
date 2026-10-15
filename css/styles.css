@@ -11,7 +11,7 @@
   --dark: #16130f;
   --on-dark: #efe9dc;
   --on-dark-muted: #a89f8c;
-  --font-display: 'Yanone Kaffeesatz', 'Arial Narrow', Impact, sans-serif;
+  --font-display: 'EuropeCond', 'Yanone Kaffeesatz', 'Arial Narrow', Impact, sans-serif;
   --font-sans: 'Jost', 'Segoe UI', Roboto, Arial, sans-serif;
   --font-script: 'Caveat', 'Segoe Script', cursive;
   --container: 1160px;
@@ -107,7 +107,7 @@ svg {
 
 .section__title {
   font-family: var(--font-display);
-  font-weight: 650;
+  font-weight: 400;
   font-size: clamp(1.7rem, 6vw, 2.7rem);
   line-height: 1.1;
   letter-spacing: 0.02em;
@@ -245,7 +245,7 @@ svg {
 
 .brand__name {
   font-family: var(--font-display);
-  font-weight: 600;
+  font-weight: 400;
   font-size: 1rem;
   line-height: 1.08;
   letter-spacing: 0.04em;
@@ -385,10 +385,10 @@ svg {
 
 .hero__title {
   font-family: var(--font-display);
-  font-weight: 700;
-  font-size: clamp(2.1rem, 12vw, 5.2rem);
+  font-weight: 400;
+  font-size: clamp(2rem, 11.4vw, 5rem);
   line-height: 1.02;
-  letter-spacing: 0.02em;
+  letter-spacing: 0;
   text-transform: uppercase;
   color: var(--ink);
   overflow-wrap: break-word;
@@ -444,12 +444,48 @@ svg {
   --king-h: clamp(124px, 44vw, 215px);
   position: relative;
   z-index: 1;
+  display: block;
   height: var(--king-h);
   width: calc(var(--king-h) * 0.7186);
+}
+
+.hero__king-half {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
   object-fit: cover;
   object-position: top center;
-  filter: var(--king-tone);
-  mix-blend-mode: darken;
+}
+
+.hero__king-half--left {
+  clip-path: polygon(0 0, 100% 0, 100% 25.6%, 0 71.5%);
+  animation: king-half-left 0.9s cubic-bezier(0.16, 0.84, 0.28, 1) 0.15s both;
+}
+
+.hero__king-half--right {
+  clip-path: polygon(0 71.3%, 100% 25.4%, 100% 100%, 0 100%);
+  animation: king-half-right 0.9s cubic-bezier(0.16, 0.84, 0.28, 1) 0.15s both;
+}
+
+@keyframes king-half-left {
+  from {
+    transform: translate(16.4%, -7.5%);
+  }
+
+  to {
+    transform: translate(0, 0);
+  }
+}
+
+@keyframes king-half-right {
+  from {
+    transform: translate(-16.4%, 7.5%);
+  }
+
+  to {
+    transform: translate(0, 0);
+  }
 }
 
 .hero__suit {
@@ -585,7 +621,7 @@ svg {
 
 .club__motto {
   font-family: var(--font-display);
-  font-weight: 550;
+  font-weight: 400;
   font-size: clamp(1.1rem, 2.8vw, 1.5rem);
   line-height: 1.55;
   letter-spacing: 0.14em;
@@ -720,7 +756,7 @@ svg {
 
 .contacts__title {
   font-family: var(--font-display);
-  font-weight: 650;
+  font-weight: 400;
   font-size: clamp(1.6rem, 4.4vw, 2.3rem);
   line-height: 1.15;
   letter-spacing: 0.03em;
@@ -904,6 +940,52 @@ svg {
   }
 }
 
+/* Mobile hero tuning */
+
+@media (max-width: 879.98px) {
+  .hero {
+    padding-block: 22px clamp(28px, 5vw, 56px);
+  }
+
+  .hero__head .section__rule {
+    margin-bottom: 12px;
+  }
+
+  .hero__subtitle {
+    margin-top: 10px;
+  }
+
+  .hero__king {
+    --king-h: clamp(138px, 48vw, 236px);
+    filter: brightness(0.92);
+  }
+
+  .hero__king-half {
+    inset: 4%;
+  }
+
+  .hero__checks {
+    gap: 10px;
+    margin-top: 14px;
+  }
+
+  .hero__cta {
+    margin-top: 18px;
+  }
+
+  .hero__strip {
+    margin-top: clamp(20px, 5vw, 40px);
+  }
+
+  .hero__suit--top {
+    right: -14px;
+  }
+
+  .hero__suit--bottom {
+    left: -14px;
+  }
+}
+
 /* Desktop */
 
 @media (min-width: 880px) {
@@ -1025,6 +1107,8 @@ svg {
   *::before,
   *::after {
     transition-duration: 0.01ms !important;
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
   }
 }
 

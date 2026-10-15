@@ -17,6 +17,14 @@
 }
 
 @font-face {
+  font-family: 'EuropeCond';
+  font-style: normal;
+  font-weight: 300 500;
+  font-display: swap;
+  src: url('../fonts/europecond-regular.woff2') format('woff2');
+}
+
+@font-face {
   font-family: 'Yanone Kaffeesatz';
   font-style: normal;
   font-weight: 200 700;

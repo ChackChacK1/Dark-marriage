@@ -728,17 +728,14 @@ svg {
   color: var(--on-dark);
 }
 
-.footer__king {
-  position: absolute;
-  top: -8px;
-  right: max(-30px, -3vw);
-  width: clamp(280px, 32vw, 430px);
-  aspect-ratio: 452 / 420;
-  object-fit: cover;
-  object-position: top center;
-  opacity: 0.32;
-  mix-blend-mode: screen;
-  pointer-events: none;
+.footer__brand {
+  display: flex;
+  align-items: center;
+}
+
+.footer__logo {
+  width: clamp(96px, 24vw, 124px);
+  height: auto;
 }
 
 .footer__inner {

@@ -1,26 +1,17 @@
 :root {
-  --cream: #f7f2ea;
-  --cream-soft: #efe6da;
   --ink: #0b0908;
   --ink-soft: #100d0c;
   --graphite: #cbbfb4;
-  --muted: #98887a;
   --bronze: #9c6845;
-  --bronze-mid: #835437;
-  --bronze-deep: #5e3c27;
-  --bronze-line: rgba(156, 104, 69, 0.32);
   --burgundy: #6b1a26;
   --burgundy-deep: #45101a;
-  --burgundy-line: rgba(107, 26, 38, 0.38);
   --dark: #070605;
   --on-dark: #f7f2ea;
   --on-dark-muted: rgba(247, 242, 234, 0.62);
   --font-display: 'Tektur', 'EuropeCond', 'Yanone Kaffeesatz', 'Arial Narrow', Impact, sans-serif;
   --font-sans: 'Jost', 'Segoe UI', Roboto, Arial, sans-serif;
-  --font-script: 'Caveat', 'Segoe Script', cursive;
   --container: 1160px;
   --gutter: 20px;
-  --grade-warm: sepia(0.5) saturate(1.05) brightness(0.94) contrast(1.07);
   --tone-bronze: brightness(0.8) saturate(0.9) hue-rotate(-10deg);
 }
 
@@ -144,17 +135,6 @@ svg {
   color: var(--graphite);
 }
 
-.placeholder {
-  display: inline-block;
-  padding: 1px 8px;
-  border: 1px dashed var(--burgundy-line);
-  background: rgba(107, 26, 38, 0.06);
-  color: var(--burgundy);
-  font-style: italic;
-  font-size: 0.95em;
-  line-height: 1.5;
-}
-
 .skip-link {
   position: fixed;
   top: 12px;
@@ -172,12 +152,6 @@ svg {
 
 .skip-link:focus {
   transform: none;
-}
-
-/* Photo grading */
-
-.photo--warm {
-  filter: var(--grade-warm);
 }
 
 /* Buttons */
@@ -211,19 +185,6 @@ svg {
 
 .btn-solid:hover {
   filter: brightness(1.08);
-}
-
-.btn-line {
-  border: 1px solid rgba(156, 104, 69, 0.55);
-  color: var(--burgundy);
-  background: transparent;
-  transition: background-color 0.2s ease, border-color 0.2s ease, color 0.2s ease;
-}
-
-.btn-line:hover {
-  color: var(--burgundy);
-  border-color: var(--bronze);
-  background: rgba(156, 104, 69, 0.1);
 }
 
 /* Header */
@@ -466,9 +427,7 @@ svg {
 
 .hero__chip-wrap {
   display: flex;
-  flex-direction: column;
-  align-items: center;
-  gap: 4px;
+  justify-content: center;
   width: min(100%, 280px);
   margin-top: 18px;
 }
@@ -483,21 +442,12 @@ svg {
   cursor: grab;
   -webkit-tap-highlight-color: transparent;
   --poster-color: transparent;
-  --progress-bar-color: var(--bronze);
-  --progress-bar-height: 2px;
+  --progress-bar-color: transparent;
+  --progress-bar-height: 0px;
 }
 
 .hero__chip:active {
   cursor: grabbing;
-}
-
-.hero__chip-hint {
-  font-size: 0.56rem;
-  font-weight: 500;
-  letter-spacing: 0.2em;
-  text-transform: uppercase;
-  color: var(--bronze);
-  opacity: 0.72;
 }
 
 .hero__media {
@@ -555,26 +505,6 @@ svg {
   to {
     transform: translate(0, 0);
   }
-}
-
-.hero__suit {
-  position: absolute;
-  z-index: 1;
-  font-size: 21px;
-  line-height: 1;
-  color: var(--bronze);
-  pointer-events: none;
-}
-
-.hero__suit--top {
-  top: 2%;
-  right: 10%;
-}
-
-.hero__suit--bottom {
-  bottom: 6%;
-  left: 6%;
-  font-size: 18px;
 }
 
 .hero__strip {
@@ -682,25 +612,6 @@ svg {
   gap: 34px;
 }
 
-.club__aside {
-  display: flex;
-  flex-direction: column;
-  gap: clamp(26px, 4vw, 40px);
-}
-
-.club__motto {
-  font-family: var(--font-display);
-  font-weight: 400;
-  font-stretch: 75%;
-  font-size: clamp(1.2rem, 3vw, 1.7rem);
-  line-height: 1.55;
-  letter-spacing: 0.14em;
-  text-transform: uppercase;
-  color: var(--bronze);
-  border-left: 1px solid rgba(107, 26, 38, 0.9);
-  padding-left: clamp(18px, 3vw, 30px);
-}
-
 .club__media {
   position: relative;
   display: grid;
@@ -719,14 +630,6 @@ svg {
 .poker {
   background: var(--ink);
   color: var(--on-dark);
-}
-
-.poker .section__title {
-  color: var(--on-dark);
-}
-
-.poker .section__lead {
-  color: rgba(247, 242, 234, 0.78);
 }
 
 .poker__inner {
@@ -808,10 +711,7 @@ svg {
   color: var(--on-dark);
 }
 
-.section--soft .section__title {
-  color: var(--on-dark);
-}
-
+.poker .section__lead,
 .section--soft .section__lead {
   color: rgba(247, 242, 234, 0.78);
 }
@@ -846,65 +746,6 @@ svg {
   display: grid;
   grid-template-columns: minmax(0, 1fr);
   gap: 44px;
-}
-
-.contacts__title {
-  font-family: var(--font-display);
-  font-weight: 400;
-  font-stretch: 75%;
-  font-size: clamp(1.6rem, 4.4vw, 2.3rem);
-  line-height: 1.15;
-  letter-spacing: 0.03em;
-  text-transform: uppercase;
-  color: var(--bronze);
-}
-
-.contacts__list {
-  display: grid;
-  gap: 22px;
-  margin-top: 28px;
-}
-
-.contacts__item {
-  display: flex;
-  align-items: flex-start;
-  gap: 14px;
-}
-
-.contacts__item svg {
-  width: 20px;
-  height: 20px;
-  flex: none;
-  margin-top: 4px;
-  color: var(--bronze);
-}
-
-.contacts__block {
-  display: flex;
-  flex-direction: column;
-  gap: 3px;
-}
-
-.contacts__main {
-  font-size: 1rem;
-  line-height: 1.45;
-  color: var(--on-dark);
-}
-
-.contacts__sub {
-  font-size: 0.86rem;
-  color: var(--on-dark-muted);
-}
-
-.contacts__link {
-  text-decoration: none;
-  border-bottom: 1px solid transparent;
-  transition: color 0.2s ease, border-color 0.2s ease;
-}
-
-.contacts__link:hover {
-  color: var(--bronze);
-  border-color: rgba(156, 104, 69, 0.5);
 }
 
 .footer__join {
@@ -972,26 +813,11 @@ svg {
 .footer__bottom {
   position: relative;
   z-index: 1;
-  display: flex;
-  flex-wrap: wrap;
-  align-items: center;
-  justify-content: space-between;
-  gap: 12px;
   margin-top: clamp(44px, 6vw, 72px);
   padding-block: 20px;
   border-top: 1px solid rgba(156, 104, 69, 0.25);
   font-size: 0.82rem;
   color: var(--on-dark-muted);
-}
-
-.footer__up {
-  color: var(--bronze);
-  text-decoration: none;
-  transition: color 0.2s ease;
-}
-
-.footer__up:hover {
-  color: var(--on-dark);
 }
 
 /* Tablet */
@@ -1069,7 +895,6 @@ svg {
 
   .hero__king {
     --king-h: clamp(138px, 48vw, 236px);
-    filter: var(--tone-bronze);
   }
 
   .hero__king-half {
@@ -1091,14 +916,6 @@ svg {
 
   .hero__strip {
     margin-top: clamp(16px, 4vw, 32px);
-  }
-
-  .hero__suit--top {
-    right: -14px;
-  }
-
-  .hero__suit--bottom {
-    left: -14px;
   }
 }
 
@@ -1198,18 +1015,6 @@ svg {
     --king-h: 420px;
   }
 
-  .hero__suit--top {
-    top: 6%;
-    right: 14%;
-    font-size: 26px;
-  }
-
-  .hero__suit--bottom {
-    bottom: 10%;
-    left: 10%;
-    font-size: 22px;
-  }
-
   .club__inner {
     grid-template-columns: minmax(0, 1.15fr) minmax(0, 0.85fr);
     align-items: center;
@@ -1263,10 +1068,6 @@ svg {
     grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
     align-items: center;
     gap: 64px;
-  }
-
-  .header__inner {
-    padding-block: 12px;
   }
 }
 

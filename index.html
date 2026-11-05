@@ -6,6 +6,14 @@
   <title>Дарк Марьяж — клуб спортивного покера</title>
   <meta name="description" content="Покерный клуб «Дарк Марьяж»: спортивный покер, обучение с нуля, турниры и фрироллы. Стратегия, навык, сообщество.">
   <meta name="theme-color" content="#0b0908">
+  <script>
+    document.documentElement.classList.add('has-js');
+    window.setTimeout(function () {
+      if (!document.documentElement.classList.contains('reveal-ready')) {
+        document.documentElement.classList.add('reveal-fallback');
+      }
+    }, 4000);
+  </script>
   <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Crect width='100' height='100' fill='%230b0908'/%3E%3Cpath d='M50 14 86 50 50 86 14 50Z' fill='%239c6845'/%3E%3C/svg%3E">
   <link rel="preload" href="fonts/tektur-cyrillic.woff2" as="font" type="font/woff2" crossorigin>
   <link rel="preload" href="fonts/tektur-latin.woff2" as="font" type="font/woff2" crossorigin>
@@ -102,9 +110,9 @@
 
   <main id="main">
     <section class="section section--soft club" id="club" aria-labelledby="club-title">
-      <img class="club__art" src="images/logo.png" alt="" aria-hidden="true" loading="lazy">
+      <img class="club__art" src="images/logo.png" alt="" aria-hidden="true" loading="lazy" decoding="async">
       <div class="container club__inner">
-        <div class="club__text">
+        <div class="club__text reveal">
           <span class="section__rule" aria-hidden="true"></span>
           <h2 class="section__title" id="club-title">О клубе</h2>
           <p class="section__lead">Dark Marriage — это сочетание спортивного покера, гастрономии, бара и персонального сервиса.
@@ -113,25 +121,25 @@
 
 Мы уделяем внимание атмосфере, качеству обслуживания и комфорту каждого гостя.</p>
         </div>
-        <figure class="club__media">
+        <figure class="club__media reveal">
           <span class="deco" aria-hidden="true">
             <span class="deco__diamond deco__diamond--lg"></span>
             <span class="deco__diamond deco__diamond--sm"></span>
             <span class="deco__diamond deco__diamond--line"></span>
           </span>
-          <img class="club__cards" src="images/cards-no-bg-preview.png" alt="Чёрно-золотые карты A♠ и K♠ и фишки с королём клуба «Дарк Марьяж»" width="768" height="475" loading="lazy">
+          <img class="club__cards" src="images/cards-no-bg-preview.png" alt="Чёрно-золотые карты A♠ и K♠ и фишки с королём клуба «Дарк Марьяж»" width="768" height="475" loading="lazy" decoding="async">
         </figure>
       </div>
     </section>
 
     <section class="section poker" aria-labelledby="poker-title">
       <div class="container poker__inner">
-        <div class="poker__text">
+        <div class="poker__text reveal">
           <span class="section__rule" aria-hidden="true"></span>
           <h2 class="section__title" id="poker-title">Что такое<br>спортивный покер?</h2>
           <p class="section__lead">Спортивный покер — это интеллектуальный вид спорта, где важны не только карты, но и стратегия, психология, дисциплина и умение читать соперников.</p>
         </div>
-        <ul class="poker__features">
+        <ul class="poker__features reveal">
           <li>
             <svg class="poker__icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
               <path d="M12 5a3 3 0 1 0-5.997.125 4 4 0 0 0-2.526 5.77 4 4 0 0 0 .556 6.588A4 4 0 1 0 12 18Z"/>
@@ -173,7 +181,7 @@
 
     <section class="section section--soft study" id="school" aria-labelledby="school-title">
       <div class="container study__inner">
-        <div class="study__content">
+        <div class="study__content reveal">
           <span class="section__rule" aria-hidden="true"></span>
           <h2 class="section__title" id="school-title">Никогда не играли в покер?<br>Начните с нами</h2>
           <p class="section__lead">В Dark Marriage не нужно быть профессионалом, чтобы занять место за столом.
@@ -212,15 +220,15 @@
 
     <section class="section team" id="team" aria-labelledby="team-title">
       <div class="container">
-        <div class="team__head">
+        <div class="team__head reveal">
           <span class="section__rule" aria-hidden="true"></span>
           <h2 class="section__title" id="team-title">Команда</h2>
           <p class="section__lead">Люди, которые создают атмосферу Dark Marriage: следят за игрой, сервисом и комфортом каждого гостя.</p>
         </div>
         <ul class="team__grid">
-          <li class="team-card">
+          <li class="team-card reveal">
             <figure class="team-card__media">
-              <img src="images/director.jpg" alt="Портрет директора клуба «Дарк Марьяж»" width="1179" height="1468" loading="lazy">
+              <img src="images/director.jpg" alt="Портрет директора клуба «Дарк Марьяж»" width="1179" height="1468" loading="lazy" decoding="async">
             </figure>
             <div class="team-card__body">
               <p class="team-card__role">Директор</p>
@@ -228,9 +236,9 @@
               <p class="team-card__text">Задаёт курс клуба и отвечает за то, чтобы в Dark Marriage было комфортно, безопасно и по-настоящему атмосферно.</p>
             </div>
           </li>
-          <li class="team-card">
+          <li class="team-card reveal">
             <figure class="team-card__media">
-              <img src="images/tournament_director.jpg" alt="Портрет турнирного директора клуба «Дарк Марьяж»" width="640" height="640" loading="lazy">
+              <img src="images/tournament_director.jpg" alt="Портрет турнирного директора клуба «Дарк Марьяж»" width="640" height="640" loading="lazy" decoding="async">
             </figure>
             <div class="team-card__body">
               <p class="team-card__role">Турнирный директор</p>
@@ -238,9 +246,9 @@
               <p class="team-card__text">Организует турниры и игровые серии, следит за регламентом и честностью борьбы за каждым столом.</p>
             </div>
           </li>
-          <li class="team-card">
+          <li class="team-card reveal">
             <figure class="team-card__media">
-              <img src="images/senior_croupier.jpg" alt="Старший крупье клуба «Дарк Марьяж» за покерным столом" width="728" height="608" loading="lazy">
+              <img src="images/senior_croupier.jpg" alt="Старший крупье клуба «Дарк Марьяж» за покерным столом" width="728" height="608" loading="lazy" decoding="async">
             </figure>
             <div class="team-card__body">
               <p class="team-card__role">Старший крупье</p>
@@ -248,9 +256,9 @@
               <p class="team-card__text">Проводит игры за столами, помогает новичкам освоиться и держит темп и порядок в зале.</p>
             </div>
           </li>
-          <li class="team-card">
+          <li class="team-card reveal">
             <figure class="team-card__media">
-              <img src="images/bar_manager.jpg" alt="Портрет управляющего баром клуба «Дарк Марьяж»" width="640" height="640" loading="lazy">
+              <img src="images/bar_manager.jpg" alt="Портрет управляющего баром клуба «Дарк Марьяж»" width="640" height="640" loading="lazy" decoding="async">
             </figure>
             <div class="team-card__body">
               <p class="team-card__role">Управляющий баром</p>
@@ -264,9 +272,9 @@
   </main>
 
   <footer class="site-footer" id="contacts" aria-label="Контакты">
-    <div class="container footer__inner">
+    <div class="container footer__inner reveal">
       <div class="footer__brand">
-        <img class="footer__logo" src="images/king-gold.png" alt="Дарк Марьяж" width="452" height="1055" loading="lazy">
+        <img class="footer__logo" src="images/king-gold.png" alt="Дарк Марьяж" width="452" height="1055" loading="lazy" decoding="async">
       </div>
       <div class="footer__join">
         <a class="join-box" href="https://t.me/dark_marijange">
@@ -285,7 +293,7 @@
     </div>
   </footer>
 
-  <script src="js/vendor/model-viewer-umd.min.js" defer></script>
   <script src="js/main.js" defer></script>
+  <script src="js/vendor/model-viewer-umd.min.js" defer></script>
 </body>
 </html>

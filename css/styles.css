@@ -135,6 +135,87 @@ svg {
   color: var(--graphite);
 }
 
+/* Scroll reveal */
+
+.reveal {
+  --reveal-delay: 0ms;
+}
+
+.club__media {
+  --reveal-delay: 100ms;
+}
+
+.team-card:nth-child(2) {
+  --reveal-delay: 80ms;
+}
+
+.team-card:nth-child(3) {
+  --reveal-delay: 160ms;
+}
+
+.team-card:nth-child(4) {
+  --reveal-delay: 240ms;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .has-js .reveal {
+    opacity: 0;
+    transform: translate3d(0, 28px, 0);
+  }
+
+  .has-js .reveal.is-visible {
+    opacity: 1;
+    transform: translate3d(0, 0, 0);
+    animation-name: reveal-up;
+    animation-duration: 0.75s;
+    animation-timing-function: cubic-bezier(0.22, 0.61, 0.36, 1);
+    animation-delay: var(--reveal-delay);
+    animation-fill-mode: backwards;
+  }
+
+  .has-js.reveal-fallback .reveal {
+    opacity: 1;
+    transform: none;
+    animation: none;
+  }
+
+  .hero__head {
+    animation: hero-enter 0.7s cubic-bezier(0.22, 0.61, 0.36, 1) both;
+  }
+
+  .hero__body {
+    animation: hero-enter 0.7s cubic-bezier(0.22, 0.61, 0.36, 1) 0.12s both;
+  }
+
+  .hero__strip {
+    animation: hero-enter 0.7s cubic-bezier(0.22, 0.61, 0.36, 1) 0.2s both;
+  }
+}
+
+@keyframes reveal-up {
+  from {
+    opacity: 0;
+    transform: translate3d(0, 28px, 0);
+  }
+
+  to {
+    opacity: 1;
+    transform: translate3d(0, 0, 0);
+  }
+}
+
+@keyframes hero-enter {
+  from {
+    opacity: 0;
+    transform: translate3d(0, 16px, 0);
+  }
+
+  to {
+    opacity: 1;
+    transform: translate3d(0, 0, 0);
+  }
+}
+
 .skip-link {
   position: fixed;
   top: 12px;
@@ -747,6 +828,10 @@ svg {
   transform: translateY(-4px);
 }
 
+.team-card.is-visible:hover {
+  transform: translateY(-4px);
+}
+
 .team-card__media {
   position: relative;
   overflow: hidden;
@@ -990,6 +1075,13 @@ svg {
   .site-header {
     position: sticky;
     top: 0;
+  }
+
+  #club,
+  #school,
+  #team,
+  #contacts {
+    scroll-margin-top: 76px;
   }
 
   .hero {

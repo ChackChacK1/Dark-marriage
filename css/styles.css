@@ -920,6 +920,140 @@ svg {
   }
 }
 
+/* Gallery */
+
+.gallery {
+  overflow: hidden;
+  background: var(--ink);
+}
+
+.gallery__head {
+  max-width: 640px;
+}
+
+.gallery__carousel {
+  --gallery-gap: 14px;
+  --gallery-per-view: 1;
+  margin-top: clamp(26px, 4vw, 42px);
+}
+
+.gallery__viewport {
+  overflow-x: auto;
+  overscroll-behavior-x: contain;
+  scroll-snap-type: x mandatory;
+  scrollbar-width: none;
+  -webkit-overflow-scrolling: touch;
+}
+
+.gallery__viewport::-webkit-scrollbar {
+  display: none;
+}
+
+.gallery__track {
+  display: flex;
+  gap: var(--gallery-gap);
+}
+
+.gallery__slide {
+  flex: 0 0 calc((100% - var(--gallery-gap) * (var(--gallery-per-view) - 1)) / var(--gallery-per-view));
+  scroll-snap-align: start;
+}
+
+.gallery__card {
+  position: relative;
+  overflow: hidden;
+  aspect-ratio: 3 / 2;
+  border: 1px solid rgba(156, 104, 69, 0.3);
+  background: var(--burgundy-deep);
+}
+
+.gallery__card::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(180deg, rgba(11, 9, 8, 0) 58%, rgba(11, 9, 8, 0.55));
+  pointer-events: none;
+}
+
+.gallery__card img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  filter: saturate(0.92) contrast(1.02);
+  transition: transform 0.6s ease;
+}
+
+.gallery__card:hover img {
+  transform: scale(1.04);
+}
+
+.gallery__caption {
+  position: absolute;
+  left: 16px;
+  bottom: 14px;
+  z-index: 1;
+  font-size: 0.64rem;
+  font-weight: 500;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: rgba(247, 242, 234, 0.85);
+}
+
+.gallery__controls {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+  margin-top: 18px;
+}
+
+.gallery__status {
+  font-size: 0.72rem;
+  font-weight: 500;
+  letter-spacing: 0.2em;
+  color: var(--on-dark-muted);
+}
+
+.gallery__arrows {
+  display: flex;
+  gap: 10px;
+}
+
+.gallery__arrow {
+  display: grid;
+  place-items: center;
+  width: 44px;
+  height: 44px;
+  padding: 0;
+  border: 1px solid rgba(156, 104, 69, 0.5);
+  background: transparent;
+  color: var(--bronze);
+  cursor: pointer;
+  transition: background-color 0.2s ease, border-color 0.2s ease, color 0.2s ease, opacity 0.2s ease;
+}
+
+.gallery__arrow svg {
+  width: 20px;
+  height: 20px;
+}
+
+.gallery__arrow:hover {
+  border-color: var(--bronze);
+  background: rgba(156, 104, 69, 0.14);
+  color: var(--on-dark);
+}
+
+.gallery__arrow:disabled {
+  opacity: 0.35;
+  cursor: default;
+}
+
+.gallery__arrow:disabled:hover {
+  border-color: rgba(156, 104, 69, 0.5);
+  background: transparent;
+  color: var(--bronze);
+}
+
 /* Footer */
 
 .site-footer {
@@ -956,6 +1090,67 @@ svg {
   display: flex;
   flex-direction: column;
   gap: 26px;
+}
+
+.footer__contacts {
+  display: grid;
+  gap: 24px;
+}
+
+.footer__contact-list {
+  display: grid;
+  gap: 16px;
+}
+
+.footer__contact {
+  display: flex;
+  align-items: flex-start;
+  gap: 12px;
+  min-width: 0;
+  font-size: 0.95rem;
+  line-height: 1.5;
+  color: rgba(247, 242, 234, 0.82);
+  text-decoration: none;
+}
+
+a.footer__contact {
+  transition: color 0.2s ease;
+}
+
+a.footer__contact:hover {
+  color: var(--bronze);
+}
+
+.footer__contact svg {
+  flex: none;
+  width: 20px;
+  height: 20px;
+  margin-top: 2px;
+  color: var(--bronze);
+}
+
+.footer__contact span {
+  min-width: 0;
+  overflow-wrap: break-word;
+}
+
+.footer__social {
+  display: flex;
+  gap: 10px;
+}
+
+.footer__social-btn {
+  display: grid;
+  place-items: center;
+  width: 44px;
+  height: 44px;
+  border: 1px solid rgba(156, 104, 69, 0.5);
+  color: var(--bronze);
+}
+
+.footer__social-btn svg {
+  width: 20px;
+  height: 20px;
 }
 
 .join-box {
@@ -1049,6 +1244,11 @@ svg {
     display: block;
   }
 
+  .gallery__carousel {
+    --gallery-gap: 18px;
+    --gallery-per-view: 2;
+  }
+
   .club::after {
     content: "";
     position: absolute;
@@ -1080,6 +1280,7 @@ svg {
   #club,
   #school,
   #team,
+  #gallery,
   #contacts {
     scroll-margin-top: 76px;
   }
@@ -1276,9 +1477,9 @@ svg {
   }
 
   .footer__inner {
-    grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+    grid-template-columns: minmax(0, 0.8fr) minmax(0, 1.1fr) minmax(0, 1fr);
     align-items: center;
-    gap: 64px;
+    gap: 48px;
   }
 }
 

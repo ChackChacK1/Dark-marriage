@@ -77,6 +77,95 @@
     }
   }
 
+  function initGallery() {
+    var root = document.querySelector('[data-gallery]');
+
+    if (!root) {
+      return;
+    }
+
+    var viewport = root.querySelector('.gallery__viewport');
+    var slides = root.querySelectorAll('.gallery__slide');
+    var prev = root.querySelector('[data-gallery-prev]');
+    var next = root.querySelector('[data-gallery-next]');
+    var status = root.querySelector('.gallery__status');
+
+    if (!viewport || !slides.length || !prev || !next) {
+      return;
+    }
+
+    var reducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)');
+    var ticking = false;
+
+    function step() {
+      if (slides.length > 1) {
+        return slides[1].offsetLeft - slides[0].offsetLeft;
+      }
+
+      return slides[0].offsetWidth;
+    }
+
+    function perView() {
+      var size = step();
+
+      return size ? Math.max(1, Math.round(viewport.clientWidth / size)) : 1;
+    }
+
+    function maxIndex() {
+      return Math.max(0, slides.length - perView());
+    }
+
+    function currentIndex() {
+      var size = step();
+
+      return size ? Math.min(maxIndex(), Math.round(viewport.scrollLeft / size)) : 0;
+    }
+
+    function update() {
+      var index = currentIndex();
+
+      prev.disabled = index <= 0;
+      next.disabled = index >= maxIndex();
+
+      if (status) {
+        status.textContent = (index + 1) + ' / ' + slides.length;
+      }
+    }
+
+    function goTo(index) {
+      viewport.scrollTo({
+        left: Math.max(0, Math.min(maxIndex(), index)) * step(),
+        behavior: reducedMotion.matches ? 'auto' : 'smooth'
+      });
+    }
+
+    prev.addEventListener('click', function () {
+      goTo(currentIndex() - 1);
+    });
+
+    next.addEventListener('click', function () {
+      goTo(currentIndex() + 1);
+    });
+
+    viewport.addEventListener('scroll', function () {
+      if (ticking) {
+        return;
+      }
+
+      ticking = true;
+
+      window.requestAnimationFrame(function () {
+        ticking = false;
+        update();
+      });
+    });
+
+    window.addEventListener('resize', update);
+
+    update();
+  }
+
   initReveal();
   initNav();
+  initGallery();
 })();

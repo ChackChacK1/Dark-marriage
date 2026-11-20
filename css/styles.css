@@ -506,31 +506,6 @@ svg {
   margin-top: 30px;
 }
 
-.hero__chip-wrap {
-  display: flex;
-  justify-content: center;
-  width: min(100%, 280px);
-  margin-top: 18px;
-}
-
-.hero__chip {
-  display: block;
-  width: clamp(126px, 34vw, 168px);
-  height: auto;
-  aspect-ratio: 1;
-  border-radius: 50%;
-  background: radial-gradient(circle, rgba(156, 104, 69, 0.24), rgba(107, 26, 38, 0.14) 52%, rgba(107, 26, 38, 0) 72%);
-  cursor: grab;
-  -webkit-tap-highlight-color: transparent;
-  --poster-color: transparent;
-  --progress-bar-color: transparent;
-  --progress-bar-height: 0px;
-}
-
-.hero__chip:active {
-  cursor: grabbing;
-}
-
 .hero__media {
   position: relative;
   grid-area: media;
@@ -889,12 +864,6 @@ svg {
   color: var(--on-dark);
 }
 
-.team-card__text {
-  font-size: 0.9rem;
-  line-height: 1.6;
-  color: rgba(247, 242, 234, 0.72);
-}
-
 @media (max-width: 479.98px) {
   .team__grid {
     gap: 12px;
@@ -912,11 +881,6 @@ svg {
   .team-card__role {
     font-size: 0.58rem;
     letter-spacing: 0.14em;
-  }
-
-  .team-card__text {
-    font-size: 0.82rem;
-    line-height: 1.5;
   }
 }
 
@@ -1146,6 +1110,13 @@ a.footer__contact:hover {
   height: 44px;
   border: 1px solid rgba(156, 104, 69, 0.5);
   color: var(--bronze);
+  transition: color 0.2s ease, border-color 0.2s ease, background-color 0.2s ease;
+}
+
+.footer__social-btn:hover {
+  border-color: var(--bronze);
+  background: rgba(156, 104, 69, 0.14);
+  color: var(--on-dark);
 }
 
 .footer__social-btn svg {
@@ -1322,10 +1293,6 @@ a.footer__contact:hover {
     margin-top: 18px;
   }
 
-  .hero__chip-wrap {
-    margin-top: 10px;
-  }
-
   .hero__strip {
     margin-top: clamp(16px, 4vw, 32px);
   }
@@ -1358,14 +1325,6 @@ a.footer__contact:hover {
 
   .hero__cta {
     margin-top: 14px;
-  }
-
-  .hero__chip {
-    width: 108px;
-  }
-
-  .hero__chip-wrap {
-    margin-top: 8px;
   }
 
   .hero__strip {

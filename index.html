@@ -1,11 +1,11 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html lang="ru">
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Дарк Марьяж — клуб интеллектуального покера</title>
   <meta name="description" content="Покерный клуб «Дарк Марьяж»: спортивный покер, обучение с нуля, турниры и фрироллы. Стратегия, навык, сообщество.">
-  <meta name="theme-color" content="#0b0908">
+  <meta name="theme-color" content="#000000">
   <script>
     document.documentElement.classList.add('has-js');
     window.setTimeout(function () {
@@ -41,6 +41,7 @@
           <ul class="site-nav__list">
             <li><a href="#club">О клубе</a></li>
             <li><a href="#school">Обучение</a></li>
+            <li><a href="#menu">Меню</a></li>
             <li><a href="#team">Команда</a></li>
             <li><a href="#gallery">Галерея</a></li>
             <li><a href="#contacts">Контакты</a></li>
@@ -50,7 +51,6 @@
     </header>
 
     <section class="hero" aria-labelledby="hero-title">
-      <span class="hero__pattern" aria-hidden="true"></span>
       <div class="container hero__inner">
         <div class="hero__head">
           <span class="section__rule" aria-hidden="true"></span>
@@ -58,13 +58,6 @@
           <p class="hero__subtitle">Новая культура спортивного покера в Сочи</p>
         </div>
         <figure class="hero__media">
-          <span class="deco" aria-hidden="true">
-            <span class="deco__diamond deco__diamond--lg"></span>
-            <span class="deco__diamond deco__diamond--sm"></span>
-            <span class="deco__diamond deco__diamond--line"></span>
-            <span class="deco__corner"></span>
-            <span class="deco__dot-line"></span>
-          </span>
           <span class="hero__king" aria-hidden="true">
             <img class="hero__king-half hero__king-half--left" src="images/king-gold.png" alt="" width="452" height="1055">
             <img class="hero__king-half hero__king-half--right" src="images/king-gold.png" alt="" width="452" height="1055">
@@ -108,7 +101,6 @@
 
   <main id="main">
     <section class="section section--soft club" id="club" aria-labelledby="club-title">
-      <img class="club__art" src="images/logo.png" alt="" aria-hidden="true" loading="lazy" decoding="async">
       <div class="container club__inner">
         <div class="club__text reveal">
           <span class="section__rule" aria-hidden="true"></span>
@@ -120,11 +112,6 @@
 Мы уделяем внимание атмосфере, качеству обслуживания и комфорту каждого гостя.</p>
         </div>
         <figure class="club__media reveal">
-          <span class="deco" aria-hidden="true">
-            <span class="deco__diamond deco__diamond--lg"></span>
-            <span class="deco__diamond deco__diamond--sm"></span>
-            <span class="deco__diamond deco__diamond--line"></span>
-          </span>
           <img class="club__cards" src="images/cards-no-bg-preview.png" alt="Чёрно-золотые карты A♠ и K♠ и фишки с королём клуба «Дарк Марьяж»" width="768" height="475" loading="lazy" decoding="async">
         </figure>
       </div>
@@ -216,6 +203,412 @@
       </div>
     </section>
 
+    <section class="section menu" id="menu" aria-labelledby="menu-title">
+      <div class="container">
+        <div class="menu__head reveal">
+          <span class="section__rule" aria-hidden="true"></span>
+          <h2 class="section__title" id="menu-title">Меню</h2>
+          <p class="section__lead">Бар и кухня Dark Marriage: кофе и чай, напитки, закуски и горячие блюда для долгих вечеров за игрой.</p>
+        </div>
+
+        <div class="menu__board reveal" data-menu>
+          <div class="menu__tablist" role="tablist" aria-label="Разделы меню">
+            <button class="menu__tab" type="button" role="tab" id="menu-tab-bar" aria-controls="menu-panel-bar" aria-selected="true" data-menu-tab="bar">Бар</button>
+            <button class="menu__tab" type="button" role="tab" id="menu-tab-kitchen" aria-controls="menu-panel-kitchen" aria-selected="false" tabindex="-1" data-menu-tab="kitchen">Кухня</button>
+          </div>
+
+          <div class="menu__panel" id="menu-panel-bar" role="tabpanel" aria-labelledby="menu-tab-bar" data-menu-panel="bar">
+            <div class="menu__body" id="menu-body-bar">
+              <div class="menu__columns">
+              <div class="menu__column">
+                <section class="menu-group" aria-labelledby="menu-group-coffee">
+                  <h3 class="menu-group__title" id="menu-group-coffee">Кофе</h3>
+                  <ul class="menu-list">
+                    <li class="menu-list__item">
+                      <span class="menu-list__name">Эспрессо</span>
+                      <span class="menu-list__meta">40&nbsp;мл</span>
+                      <span class="menu-list__price">200&nbsp;₽</span>
+                    </li>
+                    <li class="menu-list__item">
+                      <span class="menu-list__name">Американо</span>
+                      <span class="menu-list__meta">200&nbsp;мл</span>
+                      <span class="menu-list__price">200&nbsp;₽</span>
+                    </li>
+                    <li class="menu-list__item">
+                      <span class="menu-list__name">Капучино</span>
+                      <span class="menu-list__meta">250&nbsp;мл</span>
+                      <span class="menu-list__price">300&nbsp;₽</span>
+                    </li>
+                    <li class="menu-list__item">
+                      <span class="menu-list__name">Флэт уайт</span>
+                      <span class="menu-list__meta">150&nbsp;мл</span>
+                      <span class="menu-list__price">300&nbsp;₽</span>
+                    </li>
+                    <li class="menu-list__item">
+                      <span class="menu-list__name">Двойной эспрессо</span>
+                      <span class="menu-list__meta">80&nbsp;мл</span>
+                      <span class="menu-list__price">300&nbsp;₽</span>
+                    </li>
+                    <li class="menu-list__item">
+                      <span class="menu-list__name">Какао</span>
+                      <span class="menu-list__meta">250&nbsp;мл</span>
+                      <span class="menu-list__price">350&nbsp;₽</span>
+                    </li>
+                  </ul>
+                </section>
+
+                <section class="menu-group" aria-labelledby="menu-group-tea">
+                  <h3 class="menu-group__title" id="menu-group-tea">Чай</h3>
+                  <ul class="menu-list">
+                    <li class="menu-list__item">
+                      <span class="menu-list__name">Ассам</span>
+                      <span class="menu-list__meta">1000&nbsp;мл</span>
+                      <span class="menu-list__price">500&nbsp;₽</span>
+                    </li>
+                    <li class="menu-list__item">
+                      <span class="menu-list__name">Эрл грей / чабрец</span>
+                      <span class="menu-list__meta">1000&nbsp;мл</span>
+                      <span class="menu-list__price">500&nbsp;₽</span>
+                    </li>
+                    <li class="menu-list__item">
+                      <span class="menu-list__name">Сенча</span>
+                      <span class="menu-list__meta">1000&nbsp;мл</span>
+                      <span class="menu-list__price">500&nbsp;₽</span>
+                    </li>
+                    <li class="menu-list__item">
+                      <span class="menu-list__name">8 сокровищ шаолиня</span>
+                      <span class="menu-list__meta">1000&nbsp;мл</span>
+                      <span class="menu-list__price">500&nbsp;₽</span>
+                    </li>
+                    <li class="menu-list__item">
+                      <span class="menu-list__name">Шу пуэр</span>
+                      <span class="menu-list__meta">1000&nbsp;мл</span>
+                      <span class="menu-list__price">700&nbsp;₽</span>
+                    </li>
+                    <li class="menu-list__item">
+                      <span class="menu-list__name">Да хун пао</span>
+                      <span class="menu-list__meta">1000&nbsp;мл</span>
+                      <span class="menu-list__price">750&nbsp;₽</span>
+                    </li>
+                    <li class="menu-list__item">
+                      <span class="menu-list__name">Ти гу анинь</span>
+                      <span class="menu-list__meta">1000&nbsp;мл</span>
+                      <span class="menu-list__price">700&nbsp;₽</span>
+                    </li>
+                    <li class="menu-list__item">
+                      <span class="menu-list__name">Медовая габа</span>
+                      <span class="menu-list__meta">1000&nbsp;мл</span>
+                      <span class="menu-list__price">700&nbsp;₽</span>
+                    </li>
+                    <li class="menu-list__item">
+                      <span class="menu-list__name">Шен пуэр</span>
+                      <span class="menu-list__meta">1000&nbsp;мл</span>
+                      <span class="menu-list__price">700&nbsp;₽</span>
+                    </li>
+                    <li class="menu-list__item">
+                      <span class="menu-list__name">Улун женьшень</span>
+                      <span class="menu-list__meta">1000&nbsp;мл</span>
+                      <span class="menu-list__price">700&nbsp;₽</span>
+                    </li>
+                  </ul>
+                </section>
+
+                <section class="menu-group" aria-labelledby="menu-group-lemonades">
+                  <h3 class="menu-group__title" id="menu-group-lemonades">Лимонады</h3>
+                  <ul class="menu-list">
+                    <li class="menu-list__item">
+                      <span class="menu-list__name">Малина — маракуйя</span>
+                      <span class="menu-list__meta">300&nbsp;мл</span>
+                      <span class="menu-list__price">450&nbsp;₽</span>
+                    </li>
+                    <li class="menu-list__item">
+                      <span class="menu-list__name">Манго — личи</span>
+                      <span class="menu-list__meta">300&nbsp;мл</span>
+                      <span class="menu-list__price">450&nbsp;₽</span>
+                    </li>
+                    <li class="menu-list__item">
+                      <span class="menu-list__name">Цитрусовый</span>
+                      <span class="menu-list__meta">300&nbsp;мл</span>
+                      <span class="menu-list__price">450&nbsp;₽</span>
+                    </li>
+                  </ul>
+                </section>
+              </div>
+
+              <div class="menu__column">
+                <section class="menu-group" aria-labelledby="menu-group-water">
+                  <h3 class="menu-group__title" id="menu-group-water">Вода / соки / газировки</h3>
+                  <ul class="menu-list">
+                    <li class="menu-list__item">
+                      <span class="menu-list__name">Боржоми</span>
+                      <span class="menu-list__meta">330&nbsp;мл</span>
+                      <span class="menu-list__price">350&nbsp;₽</span>
+                    </li>
+                    <li class="menu-list__item">
+                      <span class="menu-list__name">Сеинт Спринг Резерв</span>
+                      <span class="menu-list__meta">330&nbsp;мл</span>
+                      <span class="menu-list__price">350&nbsp;₽</span>
+                    </li>
+                    <li class="menu-list__item">
+                      <span class="menu-list__name">Сеинт Спринг Резерв газ</span>
+                      <span class="menu-list__meta">330&nbsp;мл</span>
+                      <span class="menu-list__price">350&nbsp;₽</span>
+                    </li>
+                    <li class="menu-list__item">
+                      <span class="menu-list__name">Кока-Кола</span>
+                      <span class="menu-list__meta">330&nbsp;мл</span>
+                      <span class="menu-list__price">350&nbsp;₽</span>
+                    </li>
+                    <li class="menu-list__item">
+                      <span class="menu-list__name">Индиан тоники (в ассортименте)</span>
+                      <span class="menu-list__meta">200&nbsp;мл</span>
+                      <span class="menu-list__price">400&nbsp;₽</span>
+                    </li>
+                    <li class="menu-list__item">
+                      <span class="menu-list__name">Ред Булл (в ассортименте)</span>
+                      <span class="menu-list__meta">250&nbsp;мл</span>
+                      <span class="menu-list__price">400&nbsp;₽</span>
+                    </li>
+                    <li class="menu-list__item">
+                      <span class="menu-list__name">Сок Rich (в ассортименте)</span>
+                      <span class="menu-list__meta">200&nbsp;мл</span>
+                      <span class="menu-list__price">300&nbsp;₽</span>
+                    </li>
+                  </ul>
+                </section>
+
+                <section class="menu-group" aria-labelledby="menu-group-beer-draft">
+                  <h3 class="menu-group__title" id="menu-group-beer-draft">Пиво / сидры разливное</h3>
+                  <ul class="menu-list">
+                    <li class="menu-list__item">
+                      <span class="menu-list__name">Коникс Хеллес</span>
+                      <span class="menu-list__meta">500&nbsp;мл</span>
+                      <span class="menu-list__price">500&nbsp;₽</span>
+                    </li>
+                    <li class="menu-list__item">
+                      <span class="menu-list__name">Коникс Хефевайцен нефильтрованное</span>
+                      <span class="menu-list__meta">500&nbsp;мл</span>
+                      <span class="menu-list__price">500&nbsp;₽</span>
+                    </li>
+                  </ul>
+                </section>
+
+                <section class="menu-group" aria-labelledby="menu-group-beer-bottle">
+                  <h3 class="menu-group__title" id="menu-group-beer-bottle">Пиво / сидры бутылочное</h3>
+                  <ul class="menu-list">
+                    <li class="menu-list__item">
+                      <span class="menu-list__name">Коникс Оверфолл ИПА</span>
+                      <span class="menu-list__meta">450&nbsp;мл</span>
+                      <span class="menu-list__price">600&nbsp;₽</span>
+                    </li>
+                    <li class="menu-list__item">
+                      <span class="menu-list__name">Бакунин Молоко+ (стаут)</span>
+                      <span class="menu-list__meta">500&nbsp;мл</span>
+                      <span class="menu-list__price">750&nbsp;₽</span>
+                    </li>
+                    <li class="menu-list__item">
+                      <span class="menu-list__name">Корона Экстра</span>
+                      <span class="menu-list__meta">330&nbsp;мл</span>
+                      <span class="menu-list__price">650&nbsp;₽</span>
+                    </li>
+                    <li class="menu-list__item">
+                      <span class="menu-list__name">Сидр «Дальняя дача» сухой</span>
+                      <span class="menu-list__meta">500&nbsp;мл</span>
+                      <span class="menu-list__price">750&nbsp;₽</span>
+                    </li>
+                    <li class="menu-list__item">
+                      <span class="menu-list__name">Сидр «Дальняя дача» полусладкий</span>
+                      <span class="menu-list__meta">500&nbsp;мл</span>
+                      <span class="menu-list__price">750&nbsp;₽</span>
+                    </li>
+                    <li class="menu-list__item">
+                      <span class="menu-list__name">Клаустайлер б/а</span>
+                      <span class="menu-list__meta">330&nbsp;мл</span>
+                      <span class="menu-list__price">450&nbsp;₽</span>
+                    </li>
+                  </ul>
+                </section>
+
+                <section class="menu-group" aria-labelledby="menu-group-hookah">
+                  <h3 class="menu-group__title" id="menu-group-hookah">Кальяны</h3>
+                  <ul class="menu-list">
+                    <li class="menu-list__item">
+                      <span class="menu-list__name">Классическая чаша</span>
+                      <span class="menu-list__price">2050&nbsp;₽</span>
+                    </li>
+                    <li class="menu-list__item">
+                      <span class="menu-list__name">Чаша на грейпфруте</span>
+                      <span class="menu-list__price">2500&nbsp;₽</span>
+                    </li>
+                    <li class="menu-list__item">
+                      <span class="menu-list__name">Чаша бонч</span>
+                      <span class="menu-list__price">3000&nbsp;₽</span>
+                    </li>
+                    <li class="menu-list__item">
+                      <span class="menu-list__name">Добавка бонч</span>
+                      <span class="menu-list__price">700&nbsp;₽</span>
+                    </li>
+                  </ul>
+                </section>
+              </div>
+              </div>
+            </div>
+
+            <div class="menu__more">
+              <button class="menu__toggle" type="button" data-menu-toggle aria-expanded="false" aria-controls="menu-body-bar">
+                <span class="menu__toggle-label">Показать всё меню</span>
+                <svg class="menu__toggle-icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M5 9l7 7 7-7" fill="none" stroke="currentColor" stroke-width="1.6"/></svg>
+              </button>
+            </div>
+
+            <div class="menu__footer">
+              <p class="menu__note">Цены указаны в рублях.</p>
+              <a class="menu__pdf" href="files/dark-marriage-bar.pdf" target="_blank" rel="noopener">
+                <span>Меню бара в PDF</span>
+                <svg viewBox="0 0 24 10" aria-hidden="true"><path d="M1 5h20M17 1.5 21.5 5 17 8.5" fill="none" stroke="currentColor" stroke-width="1.6"/></svg>
+              </a>
+            </div>
+          </div>
+
+          <div class="menu__panel" id="menu-panel-kitchen" role="tabpanel" aria-labelledby="menu-tab-kitchen" data-menu-panel="kitchen" hidden>
+            <div class="menu__body" id="menu-body-kitchen">
+              <div class="menu__columns">
+              <div class="menu__column">
+                <section class="menu-group" aria-labelledby="menu-group-starters">
+                  <h3 class="menu-group__title" id="menu-group-starters">Закуски</h3>
+                  <ul class="menu-list">
+                    <li class="menu-list__item">
+                      <span class="menu-list__name">Ростбиф вителло тонато</span>
+                      <span class="menu-list__meta">220&nbsp;г</span>
+                      <span class="menu-list__price">810&nbsp;₽</span>
+                    </li>
+                    <li class="menu-list__item">
+                      <span class="menu-list__name">Рваная моцарелла прошюто с орехами</span>
+                      <span class="menu-list__meta">180&nbsp;г</span>
+                      <span class="menu-list__price">620&nbsp;₽</span>
+                    </li>
+                    <li class="menu-list__item">
+                      <span class="menu-list__name">Попкорн из креветок со сладким васаби</span>
+                      <span class="menu-list__meta">220&nbsp;г</span>
+                      <span class="menu-list__price">740&nbsp;₽</span>
+                    </li>
+                    <li class="menu-list__item">
+                      <span class="menu-list__name">Бриошь с рваной говядиной</span>
+                      <span class="menu-list__meta">180&nbsp;г</span>
+                      <span class="menu-list__price">720&nbsp;₽</span>
+                    </li>
+                    <li class="menu-list__item">
+                      <span class="menu-list__name">Бриошь с креветкой и сладкими томатами</span>
+                      <span class="menu-list__meta">180&nbsp;г</span>
+                      <span class="menu-list__price">740&nbsp;₽</span>
+                    </li>
+                    <li class="menu-list__item">
+                      <span class="menu-list__name">Брускетта с авокадо, томами и рваной моцареллой</span>
+                      <span class="menu-list__meta">200&nbsp;г</span>
+                      <span class="menu-list__price">740&nbsp;₽</span>
+                    </li>
+                    <li class="menu-list__item">
+                      <span class="menu-list__name">Брускетта с вялеными томатами и пармским окс</span>
+                      <span class="menu-list__meta">210&nbsp;г</span>
+                      <span class="menu-list__price">740&nbsp;₽</span>
+                    </li>
+                    <li class="menu-list__item">
+                      <span class="menu-list__name">Мясная тарелка</span>
+                      <span class="menu-list__meta">130&nbsp;г</span>
+                      <span class="menu-list__price">750&nbsp;₽</span>
+                    </li>
+                    <li class="menu-list__item">
+                      <span class="menu-list__name">Сырная тарелка</span>
+                      <span class="menu-list__meta">130&nbsp;г</span>
+                      <span class="menu-list__price">720&nbsp;₽</span>
+                    </li>
+                    <li class="menu-list__item">
+                      <span class="menu-list__name">Оливки</span>
+                      <span class="menu-list__meta">220&nbsp;г</span>
+                      <span class="menu-list__price">600&nbsp;₽</span>
+                    </li>
+                  </ul>
+                </section>
+              </div>
+
+              <div class="menu__column">
+                <section class="menu-group" aria-labelledby="menu-group-salads">
+                  <h3 class="menu-group__title" id="menu-group-salads">Салаты</h3>
+                  <ul class="menu-list">
+                    <li class="menu-list__item">
+                      <span class="menu-list__label">
+                        <span class="menu-list__name">Салат с телятиной</span>
+                        <span class="menu-list__desc">Ростбиф, томаты ким-чи, бейби микс, фасоль, эдамаме, перцы маринованные и дрессинг медово-горчичный</span>
+                      </span>
+                      <span class="menu-list__meta">260&nbsp;г</span>
+                      <span class="menu-list__price">880&nbsp;₽</span>
+                    </li>
+                    <li class="menu-list__item">
+                      <span class="menu-list__name">Салат с листьями романо, соусом тонато и цыплёнком</span>
+                      <span class="menu-list__meta">235&nbsp;г</span>
+                      <span class="menu-list__price">810&nbsp;₽</span>
+                    </li>
+                    <li class="menu-list__item">
+                      <span class="menu-list__name">Салат с листьями романо, соусом тонато и креветкой</span>
+                      <span class="menu-list__meta">230&nbsp;г</span>
+                      <span class="menu-list__price">890&nbsp;₽</span>
+                    </li>
+                    <li class="menu-list__item">
+                      <span class="menu-list__name">Салат с маринованной креветкой, киноа и устричным ай-оли</span>
+                      <span class="menu-list__meta">260&nbsp;г</span>
+                      <span class="menu-list__price">870&nbsp;₽</span>
+                    </li>
+                  </ul>
+                </section>
+
+                <section class="menu-group" aria-labelledby="menu-group-hot">
+                  <h3 class="menu-group__title" id="menu-group-hot">Горячие блюда</h3>
+                  <ul class="menu-list">
+                    <li class="menu-list__item">
+                      <span class="menu-list__name">Бифштекс с сыром, спаржей и перечным соусом</span>
+                      <span class="menu-list__meta">320&nbsp;г</span>
+                      <span class="menu-list__price">980&nbsp;₽</span>
+                    </li>
+                    <li class="menu-list__item">
+                      <span class="menu-list__name">Говяжья щёчка с пюре, зелёным горошком и соусом порто</span>
+                      <span class="menu-list__meta">320&nbsp;г</span>
+                      <span class="menu-list__price">960&nbsp;₽</span>
+                    </li>
+                    <li class="menu-list__item">
+                      <span class="menu-list__name">Филе цыплёнка с булгуром, грами и куриным жу</span>
+                      <span class="menu-list__meta">320&nbsp;г</span>
+                      <span class="menu-list__price">730&nbsp;₽</span>
+                    </li>
+                    <li class="menu-list__item">
+                      <span class="menu-list__name">Сэндвич с мортаделлой и картофелем фри</span>
+                      <span class="menu-list__meta">320&nbsp;г</span>
+                      <span class="menu-list__price">720&nbsp;₽</span>
+                    </li>
+                  </ul>
+                </section>
+              </div>
+              </div>
+            </div>
+
+            <div class="menu__more">
+              <button class="menu__toggle" type="button" data-menu-toggle aria-expanded="false" aria-controls="menu-body-kitchen">
+                <span class="menu__toggle-label">Показать всё меню</span>
+                <svg class="menu__toggle-icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M5 9l7 7 7-7" fill="none" stroke="currentColor" stroke-width="1.6"/></svg>
+              </button>
+            </div>
+
+            <div class="menu__footer">
+              <p class="menu__note">Изготовитель и поставщик: Чан Хюи Хиен. Цены указаны в рублях.</p>
+              <a class="menu__pdf" href="files/dark-marriage-kitchen.pdf" target="_blank" rel="noopener">
+                <span>Меню кухни в PDF</span>
+                <svg viewBox="0 0 24 10" aria-hidden="true"><path d="M1 5h20M17 1.5 21.5 5 17 8.5" fill="none" stroke="currentColor" stroke-width="1.6"/></svg>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
     <section class="section team" id="team" aria-labelledby="team-title">
       <div class="container">
         <div class="team__head reveal">
@@ -226,38 +619,38 @@
         <ul class="team__grid">
           <li class="team-card reveal">
             <figure class="team-card__media">
-              <img src="images/director.jpg" alt="Портрет директора клуба «Дарк Марьяж»" width="1179" height="1468" loading="lazy" decoding="async">
+              <img src="images/IMG_5076.png" alt="Ведущий игры клуба «Дарк Марьяж»" width="1086" height="1448" loading="lazy" decoding="async">
             </figure>
             <div class="team-card__body">
-              <p class="team-card__role">Директор</p>
-              <h3 class="team-card__name">Килиан Мбаппе</h3>
+              <p class="team-card__role">Ведущий игры</p>
+              <h3 class="team-card__name">Владимир Таранцев</h3>
             </div>
           </li>
           <li class="team-card reveal">
             <figure class="team-card__media">
-              <img src="images/tournament_director.jpg" alt="Портрет турнирного директора клуба «Дарк Марьяж»" width="640" height="640" loading="lazy" decoding="async">
+              <img src="images/IMG_5077.png" alt="Ведущий игры клуба «Дарк Марьяж»" width="1086" height="1448" loading="lazy" decoding="async">
             </figure>
             <div class="team-card__body">
-              <p class="team-card__role">Турнирный директор</p>
-              <h3 class="team-card__name">Борис Ковалев</h3>
+              <p class="team-card__role">Ведущий игры</p>
+              <h3 class="team-card__name">Марсель Кисамов</h3>
             </div>
           </li>
           <li class="team-card reveal">
             <figure class="team-card__media">
-              <img src="images/senior_croupier.jpg" alt="Старший крупье клуба «Дарк Марьяж» за покерным столом" width="728" height="608" loading="lazy" decoding="async">
+              <img src="images/IMG_5078.png" alt="Ведущий игры клуба «Дарк Марьяж»" width="1086" height="1448" loading="lazy" decoding="async">
             </figure>
             <div class="team-card__body">
-              <p class="team-card__role">Старший крупье</p>
-              <h3 class="team-card__name">Алан</h3>
+              <p class="team-card__role">Ведущий игры</p>
+              <h3 class="team-card__name">Анастасия Зуева</h3>
             </div>
           </li>
           <li class="team-card reveal">
             <figure class="team-card__media">
-              <img src="images/bar_manager.jpg" alt="Портрет управляющего баром клуба «Дарк Марьяж»" width="640" height="640" loading="lazy" decoding="async">
+              <img src="images/IMG_5079.png" alt="Ведущий игры клуба «Дарк Марьяж»" width="1086" height="1448" loading="lazy" decoding="async">
             </figure>
             <div class="team-card__body">
-              <p class="team-card__role">Управляющий баром</p>
-              <h3 class="team-card__name">Сергей Булгаков</h3>
+              <p class="team-card__role">Ведущий игры</p>
+              <h3 class="team-card__name">Татьяна Баканова</h3>
             </div>
           </li>
         </ul>
@@ -277,19 +670,16 @@
               <li class="gallery__slide" role="group" aria-roledescription="слайд" aria-label="1 из 3">
                 <figure class="gallery__card">
                   <img src="images/gallery/21fbfb40066891b865bc32509aa376ae.jpg" alt="Рука открывает туз пик за покерным столом среди фишек" width="1400" height="934" loading="lazy" decoding="async">
-                  <figcaption class="gallery__caption">За игровым столом</figcaption>
                 </figure>
               </li>
               <li class="gallery__slide" role="group" aria-roledescription="слайд" aria-label="2 из 3">
                 <figure class="gallery__card">
                   <img src="images/gallery/cards-of-poker-player-on-the-table-are-chips-and-a-glass-of-cocktail-with-whiskey-combination-of-cards-royal-flush-photo.jpg" alt="Веер карт, красные фишки и стакан виски на покерном столе" width="1050" height="700" loading="lazy" decoding="async">
-                  <figcaption class="gallery__caption">Карты и фишки</figcaption>
                 </figure>
               </li>
               <li class="gallery__slide" role="group" aria-roledescription="слайд" aria-label="3 из 3">
                 <figure class="gallery__card">
                   <img src="images/gallery/view-casino-gambling-cards_23-2151007860.jpg" alt="Короли в колоде карт на покерном столе" width="626" height="351" loading="lazy" decoding="async">
-                  <figcaption class="gallery__caption">Короли в колоде</figcaption>
                 </figure>
               </li>
             </ul>
@@ -364,7 +754,7 @@
       </div>
     </div>
     <div class="container footer__bottom">
-      <p>© Дарк Марьяж — покерный клуб</p>
+      <p>© Дарк Марьяж — премиальный клуб интеллектуального покера</p>
     </div>
   </footer>
 

@@ -165,7 +165,96 @@
     update();
   }
 
+  function initMenuTabs() {
+    var root = document.querySelector('[data-menu]');
+
+    if (!root) {
+      return;
+    }
+
+    var tabs = Array.prototype.slice.call(root.querySelectorAll('[data-menu-tab]'));
+    var panels = Array.prototype.slice.call(root.querySelectorAll('[data-menu-panel]'));
+
+    if (!tabs.length || !panels.length) {
+      return;
+    }
+
+    function select(name) {
+      for (var i = 0; i < tabs.length; i++) {
+        var isSelected = tabs[i].getAttribute('data-menu-tab') === name;
+
+        tabs[i].setAttribute('aria-selected', String(isSelected));
+        tabs[i].tabIndex = isSelected ? 0 : -1;
+      }
+
+      for (var j = 0; j < panels.length; j++) {
+        panels[j].hidden = panels[j].getAttribute('data-menu-panel') !== name;
+      }
+    }
+
+    root.addEventListener('click', function (event) {
+      var tab = event.target.closest('[data-menu-tab]');
+
+      if (tab) {
+        select(tab.getAttribute('data-menu-tab'));
+      }
+    });
+
+    root.addEventListener('keydown', function (event) {
+      var index = tabs.indexOf(document.activeElement);
+
+      if (index === -1) {
+        return;
+      }
+
+      var nextIndex = index;
+
+      if (event.key === 'ArrowRight') {
+        nextIndex = (index + 1) % tabs.length;
+      } else if (event.key === 'ArrowLeft') {
+        nextIndex = (index - 1 + tabs.length) % tabs.length;
+      } else if (event.key === 'Home') {
+        nextIndex = 0;
+      } else if (event.key === 'End') {
+        nextIndex = tabs.length - 1;
+      } else {
+        return;
+      }
+
+      event.preventDefault();
+      tabs[nextIndex].focus();
+      select(tabs[nextIndex].getAttribute('data-menu-tab'));
+    });
+  }
+
+  function initMenuToggles() {
+    var buttons = document.querySelectorAll('[data-menu-toggle]');
+
+    for (var i = 0; i < buttons.length; i++) {
+      (function (button) {
+        button.addEventListener('click', function () {
+          var panel = button.closest('[data-menu-panel]');
+          var label = button.querySelector('.menu__toggle-label');
+
+          if (!panel) {
+            return;
+          }
+
+          var expanded = panel.classList.toggle('is-expanded');
+
+          button.setAttribute('aria-expanded', String(expanded));
+
+          if (label) {
+            label.textContent = expanded ? 'Свернуть меню' : 'Показать всё меню';
+          }
+        });
+      })(buttons[i]);
+    }
+  }
+
   initReveal();
   initNav();
   initGallery();
+  initMenuTabs();
+  initMenuToggles();
 })();
